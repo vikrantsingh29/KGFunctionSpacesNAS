@@ -1,0 +1,32 @@
+#experimentName: sample_experiment
+#trialConcurrency: 1
+#maxExecDuration: 1h
+#maxTrialNum: 10
+#command: python nas.py
+#codeDir: .
+#tuner:
+#  builtinTunerName: TPE
+#trainingService:
+#  platform: local
+#  useActiveGpu: true
+#searchSpaceFile: search_space.json
+#useAnnotation: false
+#debug: true
+#logLevel: info
+
+experimentName: nas_for_knowledge_graph
+trialConcurrency: 1
+maxExperimentDuration: 10h
+maxTrialNumber: 36
+searchSpaceFile: search_space.json
+useAnnotation: false
+trialCommand: python main.py
+trialCodeDirectory: .
+trialGpuNumber: 0
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: maximize
+trainingService:
+  platform: local
+  use_active_gpu: False

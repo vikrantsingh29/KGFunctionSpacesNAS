@@ -1,0 +1,11 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"dicee.trainer" [color="black", label=<dicee.trainer>, shape="box", style="solid"];
+"dicee.trainer.dice_trainer" [color="black", label=<dicee.trainer.dice_trainer>, shape="box", style="solid"];
+"dicee.trainer.torch_trainer" [color="black", label=<dicee.trainer.torch_trainer>, shape="box", style="solid"];
+"dicee.trainer.torch_trainer_ddp" [color="black", label=<dicee.trainer.torch_trainer_ddp>, shape="box", style="solid"];
+"dicee.trainer" -> "dicee.trainer.dice_trainer" [arrowhead="open", arrowtail="none"];
+"dicee.trainer.dice_trainer" -> "dicee.trainer.torch_trainer" [arrowhead="open", arrowtail="none"];
+"dicee.trainer.dice_trainer" -> "dicee.trainer.torch_trainer_ddp" [arrowhead="open", arrowtail="none"];
+}
